@@ -137,6 +137,9 @@ module "module_name" {
   * [Example Configurations](https://www.terraform.io/intro/examples/index.html)
   * [Getting Started](https://learn.hashicorp.com/terraform/getting-started/install)
   * [Advanced Tracks](https://learn.hashicorp.com/terraform/?track=aws#aws)
+  * [examples](https://github.com/hashicorp/terraform/tree/master/examples)
+    * [AWS](https://github.com/terraform-providers/terraform-provider-aws/tree/master/examples)
+    * [GCP](https://github.com/terraform-providers/terraform-provider-google/tree/master/examples)
 * ブログ系
   * [Terraform入門 日本語訳](https://qiita.com/zembutsu/items/84f5478701c5391df537)
   * [Terraform入門 #1 Terraformはいいぞ](http://www.mpon.me/entry/2017/07/07/194459)
