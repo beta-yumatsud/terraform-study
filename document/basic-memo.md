@@ -121,6 +121,13 @@ module "module_name" {
 }
 ```
 
+### 注意事項
+* terraformは実行するディレクトリ配下の全てのtfファイルを読み込む。故に実行ディレクトリ配下に存在するtfファイルのみ同じtfstateで管理される (これはmoduleも同様)
+* moduleを利用する場合
+ * terraform planを打つ前に、terraform getというコマンドを打つ必要がある
+ * getは単にmoduleのファイルを実行ディレクトリ配下にコピーをしてきているだけ
+ * 普通は意識する必要はないが、 `.terraform/modules` というディレクトリが自動的に作成されている
+
 ### 使用例
 ＜＜Qiitaとかに試してみものなどはまとめて古今いリンクを貼る＞＞
 
@@ -130,6 +137,9 @@ module "module_name" {
   * [Example Configurations](https://www.terraform.io/intro/examples/index.html)
   * [Getting Started](https://learn.hashicorp.com/terraform/getting-started/install)
   * [Advanced Tracks](https://learn.hashicorp.com/terraform/?track=aws#aws)
+  * [examples](https://github.com/hashicorp/terraform/tree/master/examples)
+    * [AWS](https://github.com/terraform-providers/terraform-provider-aws/tree/master/examples)
+    * [GCP](https://github.com/terraform-providers/terraform-provider-google/tree/master/examples)
 * ブログ系
   * [Terraform入門 日本語訳](https://qiita.com/zembutsu/items/84f5478701c5391df537)
   * [Terraform入門 #1 Terraformはいいぞ](http://www.mpon.me/entry/2017/07/07/194459)
